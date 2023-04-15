@@ -1,0 +1,25 @@
+{
+  "env": { "es2021": true, "node": true },
+  "extends": ["airbnb", "airbnb/hooks", "plugin:react/jsx-runtime", "prettier"],
+  "overrides": [],
+  "parserOptions": { "ecmaVersion": "latest", "sourceType": "module" },
+  "plugins": ["react"],
+  "rules": {
+    "global-require": "off",
+    "import/prefer-default-export": "warn",
+    "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+    "no-use-before-define": ["error", { "functions": false, "variables": false }],
+    "react/forbid-prop-types": "warn",
+    "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
+    "react/jsx-props-no-spreading": ["error", { "custom": "ignore" }],
+    "react/style-prop-object": ["error", { "allow": ["StatusBar"] }]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".android.js", ".android.jsx", ".ios.js", ".ios.jsx", ".js", ".jsx"],
+        "paths": ["."]
+      }
+    }
+  }
+}

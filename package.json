@@ -1,0 +1,36 @@
+{
+  "dependencies": {
+    "expo": "~48.0.11",
+    "expo-status-bar": "~1.4.4",
+    "react": "18.2.0",
+    "react-native": "0.71.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0",
+    "babel-plugin-module-resolver": "^5.0.0",
+    "eslint": "^7.32.0 || ^8.2.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "prettier": "^2.8.7"
+  },
+  "main": "node_modules/expo/AppEntry.js",
+  "name": "favoriteplaces",
+  "peerDependencies": {
+    "@expo/vector-icons": "^13.0.0"
+  },
+  "private": true,
+  "scripts": {
+    "android": "expo start --android",
+    "eslint:fix": "eslint . --ext .js,.jsx --fix",
+    "ios": "expo start --ios",
+    "prettier:format": "prettier **/*.{js,jsx,json} --write",
+    "start": "expo start",
+    "start:wsl": "REACT_NATIVE_PACKAGER_HOSTNAME=192.168.0.199 expo start",
+    "web": "expo start --web"
+  },
+  "version": "1.0.0"
+}
