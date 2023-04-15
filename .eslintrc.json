@@ -12,6 +12,7 @@
     "react/forbid-prop-types": "warn",
     "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
     "react/jsx-props-no-spreading": ["error", { "custom": "ignore" }],
+    "react/prop-types": "off",
     "react/style-prop-object": ["error", { "allow": ["StatusBar"] }]
   },
   "settings": {
