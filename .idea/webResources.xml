@@ -6,6 +6,9 @@
         <entryData>
           <resourceRoots>
             <path value="file://$PROJECT_DIR$/assets" />
+            <path value="file://$PROJECT_DIR$/screens" />
+            <path value="file://$PROJECT_DIR$/components" />
+            <path value="file://$PROJECT_DIR$/models" />
           </resourceRoots>
         </entryData>
       </entry>
