@@ -6,6 +6,12 @@
     "ios": { "supportsTablet": true },
     "name": "FavoritePlaces",
     "orientation": "portrait",
+    "plugins": [
+      [
+        "expo-image-picker",
+        { "cameraPermission": "The app needs access to your camera in order to take photos of your favourite places." }
+      ]
+    ],
     "slug": "FavoritePlaces",
     "splash": { "backgroundColor": "#ffffff", "image": "./assets/splash.png", "resizeMode": "contain" },
     "userInterfaceStyle": "light",
