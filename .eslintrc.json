@@ -9,11 +9,14 @@
     "import/prefer-default-export": "warn",
     "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
     "no-use-before-define": ["error", { "functions": false, "variables": false }],
+    "react-hooks/exhaustive-deps": "warn",
     "react/forbid-prop-types": "warn",
     "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
     "react/jsx-props-no-spreading": ["error", { "custom": "ignore" }],
-    "react/prop-types": "off",
-    "react/style-prop-object": ["error", { "allow": ["StatusBar"] }]
+    "react/no-unstable-nested-components": ["error", { "allowAsProps": true }],
+    "react/style-prop-object": ["error", { "allow": ["StatusBar"] }],
+
+    "react/prop-types": "off"
   },
   "settings": {
     "import/resolver": {
