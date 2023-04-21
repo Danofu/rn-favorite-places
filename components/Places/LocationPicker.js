@@ -7,7 +7,7 @@ import OutlinedButton from 'components/UI/OutlinedButton';
 import Colors from 'constants/colors';
 import getMapPreview from 'util/location';
 
-function LocationPicker() {
+function LocationPicker({ onLocationPicked }) {
   const [locationPermissionInfo, requestPermission] = useForegroundPermissions();
   const [pickedLocation, setPickedLocation] = useState();
   const { navigate } = useNavigation();
@@ -35,6 +35,7 @@ function LocationPicker() {
 
     const { coords } = await getCurrentPositionAsync();
     setPickedLocation({ lat: coords.latitude, lng: coords.longitude });
+    onLocationPicked({ lat: coords.latitude, lng: coords.longitude });
   };
 
   const pickOnMapHandler = () => navigate('Map');
@@ -43,8 +44,9 @@ function LocationPicker() {
     const mapPickedLocation = params && { lat: params.pickedLat, lng: params.pickedLng };
     if (mapPickedLocation) {
       setPickedLocation(mapPickedLocation);
+      onLocationPicked(mapPickedLocation);
     }
-  }, [params]);
+  }, [onLocationPicked, params]);
 
   let locationPreview = <Text>No location picked yet.</Text>;
 
