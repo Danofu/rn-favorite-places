@@ -7,7 +7,12 @@ import IconButton from 'components/UI/IconButton';
 function Map({ navigation }) {
   const [selectedLocation, setSelectedLocation] = useState();
 
-  const region = { latitude: 37.78, longitude: -122.43, latitudeDelta: 0.0922, longitudeDelta: 0.0421 };
+  const region = {
+    latitude: 52.157481207600476,
+    longitude: 20.78718524426222,
+    latitudeDelta: 0.0922,
+    longitudeDelta: 0.0421,
+  };
 
   const selectLocationHandler = (event) => {
     const lat = event.nativeEvent.coordinate.latitude;
