@@ -56,3 +56,15 @@ export const fetchPlaces = () =>
       )
     );
   });
+
+export const fetchPlaceDetails = (id) =>
+  new Promise((resolve, reject) => {
+    database.transaction((transaction) =>
+      transaction.executeSql(
+        'SELECT * FROM places WHERE id=?',
+        [id],
+        (_, result) => resolve(result.rows._array[0]),
+        (_, error) => reject(error)
+      )
+    );
+  });
