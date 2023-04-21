@@ -17,6 +17,7 @@
     "react/no-unstable-nested-components": ["error", { "allowAsProps": true }],
     "react/style-prop-object": ["error", { "allow": ["StatusBar"] }],
 
+    "react/jsx-no-bind": "off",
     "react/prop-types": "off"
   },
   "settings": {
