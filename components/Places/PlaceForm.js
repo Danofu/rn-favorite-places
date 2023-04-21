@@ -3,6 +3,7 @@ import { useState } from 'react';
 
 import Colors from 'constants/colors';
 import ImagePicker from 'components/Places/ImagePicker';
+import LocationPicker from 'components/Places/LocationPicker';
 
 function PlaceForm() {
   const [enteredTitle, setEnteredTitle] = useState('');
@@ -16,6 +17,7 @@ function PlaceForm() {
         <TextInput onChangeText={changeTitleHandler} style={styles.input} value={enteredTitle} />
       </View>
       <ImagePicker />
+      <LocationPicker />
     </ScrollView>
   );
 }
