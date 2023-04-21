@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     borderBottomLeftRadius: 4,
     borderTopLeftRadius: 4,
     flex: 1,
-    height: '100%',
+    height: 100,
   },
   info: {
     flex: 2,

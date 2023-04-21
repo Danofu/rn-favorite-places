@@ -1,15 +1,17 @@
 import { useEffect, useState } from 'react';
 
 import PlacesList from 'components/Places/PlacesList';
+import { fetchPlaces } from 'util/database';
 
-function AllPlaces({ route }) {
+function AllPlaces() {
   const [loadedPlaces, setLoadedPlaces] = useState([]);
 
   useEffect(() => {
-    if (route.params) {
-      setLoadedPlaces((prevLoadedPlaces) => [...prevLoadedPlaces, route.params.place]);
-    }
-  }, [route]);
+    (async () => {
+      const places = await fetchPlaces();
+      setLoadedPlaces(places);
+    })();
+  }, []);
 
   return <PlacesList places={loadedPlaces} />;
 }

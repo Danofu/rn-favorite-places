@@ -7,6 +7,7 @@
   "rules": {
     "global-require": "off",
     "import/prefer-default-export": "warn",
+    "no-underscore-dangle": ["error", { "allow": ["_array"] }],
     "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
     "no-use-before-define": ["error", { "functions": false, "variables": false }],
     "react-hooks/exhaustive-deps": "warn",

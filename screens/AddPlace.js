@@ -3,9 +3,8 @@ import { insertPlace } from 'util/database';
 
 function AddPlace({ navigation }) {
   const createPlaceHandler = async (place) => {
-    const result = await insertPlace(place);
-    console.log('[ AddPlace ]:', result);
-    navigation.navigate('AllPlaces', { place });
+    await insertPlace(place);
+    navigation.navigate('AllPlaces');
   };
 
   return <PlaceForm onCreatePlace={createPlaceHandler} />;
