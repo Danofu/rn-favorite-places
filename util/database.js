@@ -9,7 +9,7 @@ export const init = () =>
         `
           CREATE TABLE IF NOT EXISTS places (
             id INTEGER PRIMARY KEY NOT NULL,
-            address, TEXT NOT NULL,
+            address TEXT NOT NULL,
             imageUri TEXT NOT NULL,
             lat REAL NOT NULL,
             lng REAL NOT NULL,
@@ -29,11 +29,12 @@ export const insertPlace = (place) =>
       transaction.executeSql(
         `
           INSERT INTO places (address, imageUri, lat, lng, title)
-          VALUES (?, ?, ?, ?, ?)
+          VALUES (?, ?, ?, ?, ?);
         `,
-        [place.address, place.imageUri, place.lat, place.lng, place.title],
+        [place.address, place.imageUri, place.location.lat, place.location.lng, place.title],
         (_, result) => resolve(result),
         (_, error) => reject(error)
       )
     );
   });
+
