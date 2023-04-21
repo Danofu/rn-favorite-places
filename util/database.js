@@ -63,7 +63,16 @@ export const fetchPlaceDetails = (id) =>
       transaction.executeSql(
         'SELECT * FROM places WHERE id=?',
         [id],
-        (_, result) => resolve(result.rows._array[0]),
+        (_, result) => {
+          const dbPlace = result.rows._array[0];
+          const place = new Place(
+            dbPlace.id,
+            dbPlace.imageUri,
+            { address: dbPlace.address, lat: dbPlace.lat, lng: dbPlace.lng },
+            dbPlace.title
+          );
+          resolve(place);
+        },
         (_, error) => reject(error)
       )
     );

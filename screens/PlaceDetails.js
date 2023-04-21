@@ -8,7 +8,8 @@ import { fetchPlaceDetails } from 'util/database';
 function PlaceDetails({ navigation, route }) {
   const [fetchedPlace, setFetchedPlace] = useState();
 
-  const showOnMapHandler = () => {};
+  const showOnMapHandler = () =>
+    navigation.navigate('Map', { initialLat: fetchedPlace.location.lat, initialLng: fetchedPlace.location.lng });
 
   useEffect(() => {
     (async () => {
